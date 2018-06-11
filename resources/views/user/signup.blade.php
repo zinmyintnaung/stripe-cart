@@ -1,16 +1,29 @@
+@extends('layouts.master')
+
+@section('content')
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
         <h1>Sign Up</h1>
-        <form action="" method="post">
+        @if(count($errors)>1)
+        <div class="alert alert-danger">
+            @foreach($errors->all() as $error)
+                <p>{{ $error }}</p>
+            @endforeach
+        </div>
+        @endif
+        <form action="{{ route('user.signup') }}" method="post">
+            {{ csrf_field() }}
             <div class="form-group">
                 <label for="email">E-Mail</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" class="form-control">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" class="form-control">
             </div>
-            <button type="submit">Sign Up</button>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+
         </form>
     </div>
 </div>
+@endsection
