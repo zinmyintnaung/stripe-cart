@@ -31,7 +31,7 @@ class ProductTableSeeder extends Seeder
             'imagePath' => 'http://www.alotofbooks.com.au/image/cache/catalog/products/9781408855669-800x800.jpg',
             'title' => 'Harry Potter and the Chamber of Secrets',
             'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque pariatur voluptatum quae ipsa nostrum iste, veniam illum temporibus nobis aliquam! Deserunt id facilis necessitatibus odit aspernatur? Blanditiis neque fuga nemo!',
-            'price' => 10,
+            'price' => 15,
         ]);
         $product->save();
 
@@ -47,7 +47,7 @@ class ProductTableSeeder extends Seeder
             'imagePath' => 'http://t0.gstatic.com/images?q=tbn:ANd9GcRthcTVI-sCPb0-OLOyZtVkGlWh_DcmpEZOei03ntsZOGL4b0sU',
             'title' => 'Harry Potter and the Order of the Phoenix',
             'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque pariatur voluptatum quae ipsa nostrum iste, veniam illum temporibus nobis aliquam! Deserunt id facilis necessitatibus odit aspernatur? Blanditiis neque fuga nemo!',
-            'price' => 10,
+            'price' => 20,
         ]);
         $product->save();
 
@@ -55,7 +55,7 @@ class ProductTableSeeder extends Seeder
             'imagePath' => 'http://t0.gstatic.com/images?q=tbn:ANd9GcRJ6GGMXZ7739HM13FvsUyQwS7ZDll_e26tto4jWUZ1U1C93keE',
             'title' => 'Harry Potter and the Half-Blood Prince',
             'description' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque pariatur voluptatum quae ipsa nostrum iste, veniam illum temporibus nobis aliquam! Deserunt id facilis necessitatibus odit aspernatur? Blanditiis neque fuga nemo!',
-            'price' => 10,
+            'price' => 25,
         ]);
         $product->save();
     }
