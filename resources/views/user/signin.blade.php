@@ -24,6 +24,8 @@
             <button type="submit" class="btn btn-primary">Sign In</button>
 
         </form>
+        <br>
+        <p>Don't have an account? <a href="{{ route('user.signup') }}">Sign up</a>  now</p>
     </div>
 </div>
 @endsection
