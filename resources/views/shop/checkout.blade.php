@@ -11,19 +11,32 @@
             <h4>Your Total: ${{ $total }}</h4>
             <div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden' : '' }}">
                 {{ Session::get('error') }}
+                <br>
+                <?php 
+                    #Debuggin for failed checkout case
+                    #var_dump(Session::get('error'));
+                    #var_dump(Session::get('debug')); 
+                    /**
+                     * TEST DATA FROM STRIPE DOCUMENTATION
+                     * Test card = 4000007020000003
+                     * Expiry Date = 12/2020
+                     * CVC = 444
+                     * Name on Card = ZIN
+                     */
+                ?>
             </div>
             <form action="{{ route('checkout') }}" method="POST" id="checkout-form">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" class="form-control" required>
+                            <input type="text" id="name" name="name" class="form-control" required>
                         </div>
                     </div>
                     <div class="col-xs-12">
                         <div class="form-group">
                             <label for="address">Address</label>
-                            <input type="text" id="address" class="form-control" required>
+                            <input type="text" id="address" name="address" class="form-control" required>
                         </div>
                     </div>
                     <div class="col-xs-12">

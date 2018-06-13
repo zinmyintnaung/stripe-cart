@@ -1,5 +1,5 @@
-Stripe.setPublishableKey('pk_test_eT4BQlFzzzLM4uuNA0WKu9fg');
-var form = $('#checkout-form');
+Stripe.setPublishableKey('pk_test_YOURKEY');
+var $form = $('#checkout-form');
 
 $form.submit(function(event){
     $('#charge-error').addClass('hidden');
@@ -22,6 +22,6 @@ function stripeResponseHandler(status, response){
     }else{
         var token = response.id;
         $form.append($('<input type="hidden" name="stripeToken" />').val(token));
-        form.get(0).submit();
+        $form.get(0).submit();
     }
 }
